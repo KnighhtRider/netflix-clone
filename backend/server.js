@@ -21,6 +21,10 @@ mongoose
 
 app.use("/api/user", userRoutes);
 
+app.get((req, res) => {
+  res.send("Hello! API ");
+})
+
 app.listen(5000, () => {
   console.log("server started at 5000");
 });
