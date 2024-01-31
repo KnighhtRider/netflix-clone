@@ -1,9 +1,10 @@
 import React from 'react'
+import Signup from './Signup'
 
 function Netflix() {
   return (
     <div>
-      Netflix
+      <Signup />
     </div>
   )
 }
