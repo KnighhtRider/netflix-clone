@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const app = express();
 
 app.use(cors({
-  origin: [""],
+  origin: ["https://netflix-clone-pi-sandy.vercel.app"],
   methods: ["POST", "GET"],
   credentials: true
 }))

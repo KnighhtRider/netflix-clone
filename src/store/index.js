@@ -82,7 +82,7 @@ export const getUsersLikedMovies = createAsyncThunk(
   async (email) => {
     const {
       data: { movies },
-    } = await axios.get(`http://localhost:5000/api/user/liked/${email}`);
+    } = await axios.get(`https://netflix-clone-api-zeta.vercel.app/api/user/liked/${email}`);
     return movies;
   }
 );
@@ -92,7 +92,7 @@ export const removeMovieFromLiked = createAsyncThunk(
   async ({ movieId, email }) => {
     const {
       data: { movies },
-    } = await axios.put("http://localhost:5000/api/user/remove", {
+    } = await axios.put("https://netflix-clone-api-zeta.vercel.app/api/user/remove", {
       email,
       movieId,
     });
