@@ -5,7 +5,13 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [""],
+  methods: ["POST", "GET"],
+  credentials: true
+}))
+
+
 app.use(express.json());
 
 mongoose
@@ -21,9 +27,9 @@ mongoose
 
 app.use("/api/user", userRoutes);
 
-app.get((req, res) => {
+app.get("/",(req, res) => {
   res.send("Hello! API ");
-})
+});
 
 app.listen(5000, () => {
   console.log("server started at 5000");
