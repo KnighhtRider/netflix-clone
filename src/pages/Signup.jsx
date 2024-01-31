@@ -26,6 +26,12 @@ function Signup() {
       console.log(err);
     }
   };
+
+  onAuthStateChanged(firebaseAuth, (currentUser) => {
+    if(currentUser) {
+      navigate("/")
+    }
+  })
  
   return (
     <Container showPassword={showPassword}>
