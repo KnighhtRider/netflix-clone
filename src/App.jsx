@@ -6,15 +6,18 @@ import Signup from "./pages/Signup";
 import Netflix from "./pages/Netflix";
 import Player from "./components/Player";
 import MoviePage from "./pages/Movies";
+import TVShows from "./pages/TVShows";
+
 
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
       <Routes>
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/signup" element={<Signup />} />
         <Route exact path="/player" element={<Player />} />
+        <Route exact path="/tv" element={<TVShows />} />
         <Route exact path="/movies" element={<MoviePage />} />
         <Route exact path="/" element={<Netflix />} />
       </Routes>
